@@ -1,6 +1,5 @@
 ﻿
-**Programmation Unix : Jeu de société “En cavale”**
-
+## **Programmation Unix : Jeu de société “En cavale”**
 #####  Programmation  Système en C++ sous Linux, la Synchronisation et la Communication inter-Processus et les Signaux.
 
 **I. Règles du jeu**
