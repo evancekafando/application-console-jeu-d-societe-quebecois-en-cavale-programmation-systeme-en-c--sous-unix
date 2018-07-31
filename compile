@@ -1,0 +1,20 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]; then
+  echo "Utilisation :"
+  echo "$0 fichier.cpp  ou  $0 fichier.c"
+  exit 1
+fi
+
+type=`expr $1 : '.*\.\(.*\)'`
+
+if [ "$type" = "c" ]; then # C
+  exec=`expr $1 : '\(.*\).c'`
+  gcc -std=c11 $1 -o $exec 
+elif [ "$type" = "cpp" ]; then # C++
+  exec=`expr $1 : '\(.*\).cpp'`
+  g++ -std=c++11 $1 -o $exec
+else
+  echo "Extension inconnue !"
+  exit 2
+fi
